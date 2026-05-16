@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Substitute:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --color-brand-success: #48BB78;
+  --color-brand-dark: #102A43;
+  --color-brand-text: #334E68;
+  --color-brand-muted: #627D98;
+  --color-brand-bg: #F0F4F8;
+  --color-brand-border: #D9E2EC;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text;
+  }
+}
+
+@layer components {
+  .geometric-card {
+    @apply bg-white rounded-[24px] shadow-[0_10px_25px_rgba(0,0,0,0.05)] border-2 border-brand-border;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-1deg); }
+  75% { transform: translateX(5px) rotate(1deg); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Confetti styling */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  z-index: 100;
+  pointer-events: none;
+}

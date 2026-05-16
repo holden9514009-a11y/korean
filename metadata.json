@@ -1,0 +1,8 @@
+{
+  "name": "중학 국어 음운 체계표 마스터",
+  "description": "중학생들이 단모음과 자음 체계표를 쉽고 재미있게 외울 수 있도록 돕는 인터랙티브 학습 도구입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
